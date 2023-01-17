@@ -1,0 +1,381 @@
+{
+    "name": "puuup",
+    "securityToken": "puuup Token",
+    "sourceConnection": {
+        "name": "im",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiMDAwNTEzYjM2MDZkNjY4MGQzMDE4ZmE5NTFjYWQ4ODZhZGI1ZmIxZjM1N2UzZWIwODRiN2ZhMDU0YWM1ODZhZTQ0NTJmZDlhNjg2MjQ1YzE3ZjRhOGUxY2YzMWY5NGMxYzQ5ZTRkMzEyMjU1YTU5OWZmNmRhNTcyYjRjNGE3MzQ1NGY5ZjdlY2FjNTkxY2RlYzNkNGU4YWQwZTQ2ZjQzMjI5NWE1MDBkMjEzYjQ5MTlkMTE2Yzg5YzNiM2EyMjI2YjVjNWZmZjI5ZGYyNDM4ZWZiMjQyMDZkOWEzYmYyNmZjZGIyNGM2YWY2ZDllMjBmNjFkOWYwOTA3YzVjZjBmMCIsIml2IjoiNjRhMzllZDg1YmIwMDZkYWNmZTg0YmQ3Y2U4NDRjYWQ0MmYwZGFlNmJkZGI0OWY3In0="
+        },
+        "id": "OiKbcFb24"
+    },
+    "targetConnection": {
+        "name": "lbls",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZjU2NWExZGIzOTRmMGNiY2YzNmM0MThhZTkxNzQ0OGE2NDU5ODA4NWQ2MjAxZjhlNDk5ZjY2NWNiMTAwNWJhMzBlYzZlODNiN2NjOTI3ZGVjZWM0Nzk3YTk4NmJiNGRiMGI4OTQzMWU5YmIzZDQ2N2MwNGI2ZGIwMThhMWQ5YWIzNWQ2MTI2ZjlmYjdjYWQ3NTJjYjgzZDk2ZDk3NDIwNTVjZDhlOTlkZDEwMTFlODM5MzdmYWI5MjJkMDkyOTQ4ZGZiMDBkNWJiNDhjYmRkMmE0ZDI0ZWNjYjMzYmU0MDNjMjQxOGQzMDFmZTY0ZDZjMDRjYTJmMmE1M2Y4ZDZiMCIsIml2IjoiOGYwMTgyZmQ5NWM1NjRhZTNmMDA5MWRlOWNhOTk5NWU2ZGQxZTdlZDQ4OWNhZmMxIn0="
+        },
+        "id": "F_jsHjB4V"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [
+        {
+            "name": "Face",
+            "color": "#00FF00"
+        }
+    ],
+    "id": "-wWQUXV9J",
+    "activeLearningSettings": {
+        "autoDetect": false,
+        "predictTag": true,
+        "modelPathType": "coco"
+    },
+    "exportFormat": {
+        "providerType": "vottJson",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjA0NWI5MmFmZjI2MjZjMTc2MjVlZDQ5NmE3NDA2OTA2OGRhZDU1ZjM2NTRmZTljZWY3YWM5MjExNmNhNzY5ZWY5YTYwN2VlNWJhZmZlODMzMmExMTJlNmJmOWExN2U3IiwiaXYiOiJiNmRlMTg3YWMyODdiMDc4NGNlN2ZlODMzNmIyYTc3NmM0NzU0MzUzM2NiNTlkZGIifQ=="
+        }
+    },
+    "version": "2.2.0",
+    "lastVisitedAssetId": "370b846753351cf6599add62c55c10f6",
+    "assets": {
+        "45bc3083e63290e8df13b54e05bef777": {
+            "format": "jpg",
+            "id": "45bc3083e63290e8df13b54e05bef777",
+            "name": "1.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/1.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6829c30abbd3aa333f9c62d7d99f46fb": {
+            "format": "jpg",
+            "id": "6829c30abbd3aa333f9c62d7d99f46fb",
+            "name": "10.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/10.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "07c7b7eced94ac2c2f1d1e2f900e0391": {
+            "format": "jpg",
+            "id": "07c7b7eced94ac2c2f1d1e2f900e0391",
+            "name": "100.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/100.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6cbe877632f8d77aab6d02aae9cad66b": {
+            "format": "jpg",
+            "id": "6cbe877632f8d77aab6d02aae9cad66b",
+            "name": "101.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/101.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1d10048debe741182aaade4147a125d9": {
+            "format": "jpg",
+            "id": "1d10048debe741182aaade4147a125d9",
+            "name": "102.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/102.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a0397c3846989876676209b6aa3d3caa": {
+            "format": "jpg",
+            "id": "a0397c3846989876676209b6aa3d3caa",
+            "name": "103.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/103.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "12a38398dc78cab14bf25847fd88c151": {
+            "format": "jpg",
+            "id": "12a38398dc78cab14bf25847fd88c151",
+            "name": "104.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/104.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8ec7a525dcdb336298093e3ffc1a773a": {
+            "format": "jpg",
+            "id": "8ec7a525dcdb336298093e3ffc1a773a",
+            "name": "105.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/105.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4e9ca0342daa4b0fc81d3c3efa88d37e": {
+            "format": "jpg",
+            "id": "4e9ca0342daa4b0fc81d3c3efa88d37e",
+            "name": "106.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/106.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "163b33e90a38c0dc32cf5e2df38bc953": {
+            "format": "jpg",
+            "id": "163b33e90a38c0dc32cf5e2df38bc953",
+            "name": "107.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/107.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b226fcbb46978920645e3122337ab89c": {
+            "format": "jpg",
+            "id": "b226fcbb46978920645e3122337ab89c",
+            "name": "108.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/108.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b39794b85b17e5dba3b6b64f8bf9c7f6": {
+            "format": "jpg",
+            "id": "b39794b85b17e5dba3b6b64f8bf9c7f6",
+            "name": "109.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/109.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3c2d6653a5e8eea1a3a49c6d8c33bf8b": {
+            "format": "jpg",
+            "id": "3c2d6653a5e8eea1a3a49c6d8c33bf8b",
+            "name": "11.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/11.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b629caafce31189e97390c3f33638acc": {
+            "format": "jpg",
+            "id": "b629caafce31189e97390c3f33638acc",
+            "name": "110.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/110.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c378f93c9ddf71dcee10104bbd44a778": {
+            "format": "jpg",
+            "id": "c378f93c9ddf71dcee10104bbd44a778",
+            "name": "111.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/111.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3e46591934c13ec973656b45b7910bfd": {
+            "format": "jpg",
+            "id": "3e46591934c13ec973656b45b7910bfd",
+            "name": "112.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/112.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c7ffe659a23d167711da27e0a840f50d": {
+            "format": "jpg",
+            "id": "c7ffe659a23d167711da27e0a840f50d",
+            "name": "113.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/113.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "43a0f34d892ea0964f44a0502ef3394a": {
+            "format": "jpg",
+            "id": "43a0f34d892ea0964f44a0502ef3394a",
+            "name": "114.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/114.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6a134e9af26bad6619694077fcbed9a4": {
+            "format": "jpg",
+            "id": "6a134e9af26bad6619694077fcbed9a4",
+            "name": "115.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/115.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7d285f6b93a84da966dde9586cc9f444": {
+            "format": "jpg",
+            "id": "7d285f6b93a84da966dde9586cc9f444",
+            "name": "116.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/116.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "66f229b6486a32c107799adde97ef8be": {
+            "format": "jpg",
+            "id": "66f229b6486a32c107799adde97ef8be",
+            "name": "117.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/117.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a930db7e0ed0aec158bc688e5932ec3c": {
+            "format": "jpg",
+            "id": "a930db7e0ed0aec158bc688e5932ec3c",
+            "name": "118.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/118.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b25cb8df24a7a7d8c963c606ee674502": {
+            "format": "jpg",
+            "id": "b25cb8df24a7a7d8c963c606ee674502",
+            "name": "119.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/119.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "05013501197b20d0b94fac578f0f9fdf": {
+            "format": "jpg",
+            "id": "05013501197b20d0b94fac578f0f9fdf",
+            "name": "12.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/12.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b24f827233f334e377fdc140717ebdbc": {
+            "format": "jpg",
+            "id": "b24f827233f334e377fdc140717ebdbc",
+            "name": "120.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/120.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "c9412b70e8c8fdf3217ab01606bd884d": {
+            "format": "jpg",
+            "id": "c9412b70e8c8fdf3217ab01606bd884d",
+            "name": "121.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/121.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "aa827ac647d27f274dc722e90d235846": {
+            "format": "jpg",
+            "id": "aa827ac647d27f274dc722e90d235846",
+            "name": "122.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/122.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 2,
+            "type": 1
+        },
+        "370b846753351cf6599add62c55c10f6": {
+            "format": "jpg",
+            "id": "370b846753351cf6599add62c55c10f6",
+            "name": "123.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceNet/data/Images/123.jpg",
+            "size": {
+                "width": 1028,
+                "height": 1028
+            },
+            "state": 1,
+            "type": 1
+        }
+    }
+}
