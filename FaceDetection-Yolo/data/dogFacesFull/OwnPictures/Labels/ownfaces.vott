@@ -1,0 +1,813 @@
+{
+    "name": "ownfaces",
+    "securityToken": "ownfaces Token",
+    "sourceConnection": {
+        "name": "OwnFaces",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiOGQzYWVjZGExZGNlZGZiYmY2YmYzMjc2MGYzMDYyNDA0NWU5MmM5Yjk1OTJmZjJjZGI4ZGUzNTA4YTRiMGE2Yzk4NjMyYzI5NzcwNmIyNDM0OThkMWRlOGExYWFlODdiNmUwOWMzM2M5ODc2OTBhMTM2YThkYzM2ZWY4NTZjYzg0OGI5OTliZDM1MTUzMDU3YTJiOWVkYWUwMDU4ZDdkYTBjOTg2Mjc0MzZiODVkMGQyMWViMzAxNzBlOTQxZTkzZDBkMmRkYzhhMGJiYWI2MDYyNjQzZDkzYmU4ZjA0MjZjYjJjZjcyMWVlMzFkMDJkYTAxZmU1OTJlMGIzMmZhZWM1YTdlNDlhODFmYzEyMmIzZWZlZmNjNjQyNDlhNDIwNThlZGNiY2JkZTQ0ZTg1ZjI4NzkzODhiYzFlNmJhMjQiLCJpdiI6ImFjZjc3MTA1YTBlOWE4ZTI0ZTI3MWM5M2JmMjhmMDQ1OTQ0YThkMzhiMDQ2MDQyYyJ9"
+        },
+        "id": "38cqhilEE"
+    },
+    "targetConnection": {
+        "name": "Ownlabels",
+        "providerType": "localFileSystemProxy",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiNjg4MmZkZjZjYmYyZTkyYzQ1NmFmNjM3YzJkYTY4ODJjOTY2NDIwZWE1ZDE1MjBkNTI2ZTQyZGE3MWQ5NjEzYmNiMzQ1MzI5YWQ2MWQ3ODJmZTM4NDQ3NmIyOWYzMzkzMGVmMmViMGRmNWQ3YjgwMjczM2MyNWJjZjE1ZGRhNGZjMjJiNzNlN2QxYTFhMmM5MjI2MGUwYjhjYTZjOTQzNmVjMDI0NDc1NjE3YmYyNDM2OGQ5NTE5ZDg1YWRlZmQyODcwM2ZkOGYxNDU4ZGRlMmMzNGU4OWJlNThlYjZmNGJmZDA1Njk5NDEyM2FhMjMyNzJiMmU1NDFmMWE0MWJhNGMzYjg0YzI5ODRkMTNkZmFmMjg5OTQxZWNiYWRmNDBmNTQ3MmM1ZGYzMDdkOWM3MzRjNWFjZmNjODgyZGQwMjIiLCJpdiI6IjU5YTU3YzE0Y2JiMzdhYmQ1MWQ5YmNiYTY2Yjc0ZWU1NmQ4NzNjZDE5ZDdiNWNlNCJ9"
+        },
+        "id": "cpMKoaQ7s"
+    },
+    "videoSettings": {
+        "frameExtractionRate": 15
+    },
+    "tags": [
+        {
+            "name": "Face",
+            "color": "#000080"
+        }
+    ],
+    "id": "YnhQ9BAFv",
+    "activeLearningSettings": {
+        "autoDetect": false,
+        "predictTag": true,
+        "modelPathType": "coco"
+    },
+    "exportFormat": {
+        "providerType": "vottJson",
+        "providerOptions": {
+            "encrypted": "eyJjaXBoZXJ0ZXh0IjoiZWQ4YWI4MGE2ODFhNjE4OGQyNDNkYWMwYTQ3NjA1MWYzOTMzNmQwY2QyNzA5ZDFkNWZkNTI3YmRmYWU3NDg4YWE2MDNmMmEyNjhjNTllMmVlMGU3M2I3MmRmN2NjNmNkIiwiaXYiOiI1ZTY5NDNjOWJlNDQyZGVkNTI3OTMxNDAzMWIxZGE2YzQxYjI0YzdjYjJjZGNkNGQifQ=="
+        }
+    },
+    "version": "2.2.0",
+    "lastVisitedAssetId": "83c062758da284d147c908d069f488d0",
+    "assets": {
+        "23e74af4e104bda52d71cf37c62e891c": {
+            "format": "JPEG",
+            "id": "23e74af4e104bda52d71cf37c62e891c",
+            "name": "100673.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/100673.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1f783491e1f80ed0173fe4769bc4c175": {
+            "format": "JPEG",
+            "id": "1f783491e1f80ed0173fe4769bc4c175",
+            "name": "110627.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/110627.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "175f0271d651baeadefeada0191f7bb6": {
+            "format": "JPEG",
+            "id": "175f0271d651baeadefeada0191f7bb6",
+            "name": "110628.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/110628.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "bbdf6237c10cc0502ee5f96c4a10115e": {
+            "format": "JPEG",
+            "id": "bbdf6237c10cc0502ee5f96c4a10115e",
+            "name": "163032.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/163032.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b72794a99add41305cd6649054bdaf24": {
+            "format": "JPEG",
+            "id": "b72794a99add41305cd6649054bdaf24",
+            "name": "166377.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/166377.JPEG",
+            "size": {
+                "width": 640,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "bef5cb0fcb72749e35e01f9d5155daec": {
+            "format": "JPEG",
+            "id": "bef5cb0fcb72749e35e01f9d5155daec",
+            "name": "3778.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/3778.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "8a6f05e916285d02c2b9bb30c7a8b70c": {
+            "format": "JPEG",
+            "id": "8a6f05e916285d02c2b9bb30c7a8b70c",
+            "name": "3779.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/3779.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "34dbe35ca8fd5dd8f9bf4b212c39bb79": {
+            "format": "JPEG",
+            "id": "34dbe35ca8fd5dd8f9bf4b212c39bb79",
+            "name": "85962.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/85962.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "963c8e9d609bd78fd14cf9cb86791013": {
+            "format": "JPEG",
+            "id": "963c8e9d609bd78fd14cf9cb86791013",
+            "name": "93282.JPEG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/93282.JPEG",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9b90c490dd7f666473daad51718a203e": {
+            "format": "JPG",
+            "id": "9b90c490dd7f666473daad51718a203e",
+            "name": "9ad1175b-508c-4546-b80b-762d6024b61b.JPG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/9ad1175b-508c-4546-b80b-762d6024b61b.JPG",
+            "size": {
+                "width": 1200,
+                "height": 1600
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4197befe81c7ccc02e8b2a01328ccc29": {
+            "format": "JPG",
+            "id": "4197befe81c7ccc02e8b2a01328ccc29",
+            "name": "e9770ae0-1e32-411b-b830-a1feef4defc2.JPG",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/e9770ae0-1e32-411b-b830-a1feef4defc2.JPG",
+            "size": {
+                "width": 1152,
+                "height": 2048
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3cf9c4bdf37a037ad1d8a7c308c8d4f6": {
+            "format": "jpg",
+            "id": "3cf9c4bdf37a037ad1d8a7c308c8d4f6",
+            "name": "IMG_2988.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/IMG_2988.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4fbf6bc7a91bf894b7a2df25f399679f": {
+            "format": "jpg",
+            "id": "4fbf6bc7a91bf894b7a2df25f399679f",
+            "name": "IMG_2989.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/IMG_2989.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4401e3561b9990b936599a89a709e607": {
+            "format": "jpg",
+            "id": "4401e3561b9990b936599a89a709e607",
+            "name": "IMG_5501.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/IMG_5501.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "80d9768ce5cbc58e0d4264af984f20ee": {
+            "format": "jpg",
+            "id": "80d9768ce5cbc58e0d4264af984f20ee",
+            "name": "IMG_5505.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/IMG_5505.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1114a09d17ec75987d07b107c5f9080e": {
+            "format": "jpg",
+            "id": "1114a09d17ec75987d07b107c5f9080e",
+            "name": "IMG_6269.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/IMG_6269.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "135567616d3a60a00534cdea52737db6": {
+            "format": "jpg",
+            "id": "135567616d3a60a00534cdea52737db6",
+            "name": "IMG_7595.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/IMG_7595.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "61ed0d04789a00368ec7238e015f0389": {
+            "format": "jpg",
+            "id": "61ed0d04789a00368ec7238e015f0389",
+            "name": "thumbnail_110526.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_110526.jpg",
+            "size": {
+                "width": 481,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "cd9d3b65a42d06db20be0de5dc97c0e8": {
+            "format": "jpg",
+            "id": "cd9d3b65a42d06db20be0de5dc97c0e8",
+            "name": "thumbnail_122571.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_122571.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3415c185b5a6f7d1bfd268ac8d53188a": {
+            "format": "jpg",
+            "id": "3415c185b5a6f7d1bfd268ac8d53188a",
+            "name": "thumbnail_122610.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_122610.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "18d1ef653de259932983b83040f103e0": {
+            "format": "jpg",
+            "id": "18d1ef653de259932983b83040f103e0",
+            "name": "thumbnail_122628.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_122628.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d818106720f9b8cf0ecae055049d5bbb": {
+            "format": "jpg",
+            "id": "d818106720f9b8cf0ecae055049d5bbb",
+            "name": "thumbnail_130518.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_130518.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3e2b5cd2c8126da131c9c2e53386401d": {
+            "format": "jpg",
+            "id": "3e2b5cd2c8126da131c9c2e53386401d",
+            "name": "thumbnail_19222.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_19222.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "1d1f09136416e6b6c03229a5341ca056": {
+            "format": "jpg",
+            "id": "1d1f09136416e6b6c03229a5341ca056",
+            "name": "thumbnail_25084.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_25084.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b7e92efbcb64ee83d8d2f529610d7c35": {
+            "format": "jpg",
+            "id": "b7e92efbcb64ee83d8d2f529610d7c35",
+            "name": "thumbnail_25086.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_25086.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "1c9f3a0e23c2a31c5bff08f8dca9fc5c": {
+            "format": "jpg",
+            "id": "1c9f3a0e23c2a31c5bff08f8dca9fc5c",
+            "name": "thumbnail_25087.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_25087.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d82df32c38d60df1d81eb0bf695f3973": {
+            "format": "jpg",
+            "id": "d82df32c38d60df1d81eb0bf695f3973",
+            "name": "thumbnail_2c7a2582-00bd-4143-9d6a-f1769ea655b0.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_2c7a2582-00bd-4143-9d6a-f1769ea655b0.jpg",
+            "size": {
+                "width": 1152,
+                "height": 2048
+            },
+            "state": 1,
+            "type": 1
+        },
+        "551516bba78db69c652ce078e6536859": {
+            "format": "jpg",
+            "id": "551516bba78db69c652ce078e6536859",
+            "name": "thumbnail_31268.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_31268.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "6f1fdf2b124b1a518dbf52135ad321e5": {
+            "format": "jpg",
+            "id": "6f1fdf2b124b1a518dbf52135ad321e5",
+            "name": "thumbnail_31289.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_31289.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d3cecd73f2586ef38bda5eb3734711e2": {
+            "format": "jpg",
+            "id": "d3cecd73f2586ef38bda5eb3734711e2",
+            "name": "thumbnail_36358.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_36358.jpg",
+            "size": {
+                "width": 640,
+                "height": 481
+            },
+            "state": 2,
+            "type": 1
+        },
+        "194dcc6119190c5e1dc9f545a33611fa": {
+            "format": "jpg",
+            "id": "194dcc6119190c5e1dc9f545a33611fa",
+            "name": "thumbnail_41188.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_41188.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "439a71f259ca192aa11189d29a7ac7dc": {
+            "format": "jpg",
+            "id": "439a71f259ca192aa11189d29a7ac7dc",
+            "name": "thumbnail_46409.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_46409.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ec323bb390a7e72d323df2d152313b02": {
+            "format": "jpg",
+            "id": "ec323bb390a7e72d323df2d152313b02",
+            "name": "thumbnail_4a9c3349-3229-42c6-9966-aed29901aa13.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_4a9c3349-3229-42c6-9966-aed29901aa13.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 2,
+            "type": 1
+        },
+        "553b20e02b789167e340b25b6d8408fe": {
+            "format": "jpg",
+            "id": "553b20e02b789167e340b25b6d8408fe",
+            "name": "thumbnail_72083.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_72083.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "9a18a62f52fd697d977410f4629732ac": {
+            "format": "jpg",
+            "id": "9a18a62f52fd697d977410f4629732ac",
+            "name": "thumbnail_72084.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_72084.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3d84a16860450ba8b8118f794bd84f40": {
+            "format": "jpg",
+            "id": "3d84a16860450ba8b8118f794bd84f40",
+            "name": "thumbnail_72085.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_72085.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "de16fb96d091547698ae489936a759f7": {
+            "format": "jpg",
+            "id": "de16fb96d091547698ae489936a759f7",
+            "name": "thumbnail_72086.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_72086.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "941315ed83fa3608a617b2c1860ecc59": {
+            "format": "jpg",
+            "id": "941315ed83fa3608a617b2c1860ecc59",
+            "name": "thumbnail_74802.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_74802.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "5faabb3baed683f82e59d680cc7128b7": {
+            "format": "jpg",
+            "id": "5faabb3baed683f82e59d680cc7128b7",
+            "name": "thumbnail_85959.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_85959.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "3bf33c94e1162b5743e51ff84e367640": {
+            "format": "jpg",
+            "id": "3bf33c94e1162b5743e51ff84e367640",
+            "name": "thumbnail_85960.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_85960.jpg",
+            "size": {
+                "width": 480,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "ebf32558ff5596fc03e6fe34a235a3c1": {
+            "format": "jpg",
+            "id": "ebf32558ff5596fc03e6fe34a235a3c1",
+            "name": "thumbnail_IMG_2861.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_2861.jpg",
+            "size": {
+                "width": 479,
+                "height": 422
+            },
+            "state": 2,
+            "type": 1
+        },
+        "f63a59610723f370c47e2c85f62e2e04": {
+            "format": "jpg",
+            "id": "f63a59610723f370c47e2c85f62e2e04",
+            "name": "thumbnail_IMG_3064.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_3064.jpg",
+            "size": {
+                "width": 640,
+                "height": 435
+            },
+            "state": 2,
+            "type": 1
+        },
+        "049b580d6478213ebb60d968a99de028": {
+            "format": "jpg",
+            "id": "049b580d6478213ebb60d968a99de028",
+            "name": "thumbnail_IMG_3160.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_3160.jpg",
+            "size": {
+                "width": 480,
+                "height": 414
+            },
+            "state": 2,
+            "type": 1
+        },
+        "41d12245d046d596b4d7ffc09188ed42": {
+            "format": "jpg",
+            "id": "41d12245d046d596b4d7ffc09188ed42",
+            "name": "thumbnail_IMG_3218.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_3218.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "88c1742970fc77506b94ddb3010470fc": {
+            "format": "jpg",
+            "id": "88c1742970fc77506b94ddb3010470fc",
+            "name": "thumbnail_IMG_3335.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_3335.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "012071b09909f92384d557f577d8ab9f": {
+            "format": "jpg",
+            "id": "012071b09909f92384d557f577d8ab9f",
+            "name": "thumbnail_IMG_3498.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_3498.jpg",
+            "size": {
+                "width": 481,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "edfbb8ee3629158b6b9d2d90ba1267e4": {
+            "format": "jpg",
+            "id": "edfbb8ee3629158b6b9d2d90ba1267e4",
+            "name": "thumbnail_IMG_4240.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_4240.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "6ccb7ee8972da33ee3bbb0473babeb5e": {
+            "format": "jpg",
+            "id": "6ccb7ee8972da33ee3bbb0473babeb5e",
+            "name": "thumbnail_IMG_5820.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_5820.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "8c029802e41958ff3fa90c4f8bb2bd3b": {
+            "format": "jpg",
+            "id": "8c029802e41958ff3fa90c4f8bb2bd3b",
+            "name": "thumbnail_IMG_5915.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_5915.jpg",
+            "size": {
+                "width": 481,
+                "height": 640
+            },
+            "state": 1,
+            "type": 1
+        },
+        "9fc746133a35436a31cea76fbc0f320e": {
+            "format": "jpg",
+            "id": "9fc746133a35436a31cea76fbc0f320e",
+            "name": "thumbnail_IMG_6268.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6268.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "a0558544388ebf41b7a832dd1fc3f3d8": {
+            "format": "jpg",
+            "id": "a0558544388ebf41b7a832dd1fc3f3d8",
+            "name": "thumbnail_IMG_6271.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6271.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "2129969f0b2713c6a98dcc9b5d120a61": {
+            "format": "jpg",
+            "id": "2129969f0b2713c6a98dcc9b5d120a61",
+            "name": "thumbnail_IMG_6513.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6513.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "e68c90bb2882dc7bd54f12f36533f106": {
+            "format": "jpg",
+            "id": "e68c90bb2882dc7bd54f12f36533f106",
+            "name": "thumbnail_IMG_6514.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6514.jpg",
+            "size": {
+                "width": 640,
+                "height": 480
+            },
+            "state": 1,
+            "type": 1
+        },
+        "2d9cd31e1be00360389c10fbdadd276b": {
+            "format": "jpg",
+            "id": "2d9cd31e1be00360389c10fbdadd276b",
+            "name": "thumbnail_IMG_6681.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6681.jpg",
+            "size": {
+                "width": 479,
+                "height": 438
+            },
+            "state": 2,
+            "type": 1
+        },
+        "65c06c5b484c276aa5befb25b8422cd7": {
+            "format": "jpg",
+            "id": "65c06c5b484c276aa5befb25b8422cd7",
+            "name": "thumbnail_IMG_6682.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6682.jpg",
+            "size": {
+                "width": 479,
+                "height": 417
+            },
+            "state": 2,
+            "type": 1
+        },
+        "69083d98792007c69c704e39e04ae79c": {
+            "format": "jpg",
+            "id": "69083d98792007c69c704e39e04ae79c",
+            "name": "thumbnail_IMG_6683.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6683.jpg",
+            "size": {
+                "width": 479,
+                "height": 428
+            },
+            "state": 2,
+            "type": 1
+        },
+        "7effadb4177668a88216a847ff332790": {
+            "format": "jpg",
+            "id": "7effadb4177668a88216a847ff332790",
+            "name": "thumbnail_IMG_6693.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6693.jpg",
+            "size": {
+                "width": 479,
+                "height": 394
+            },
+            "state": 2,
+            "type": 1
+        },
+        "458ce09003ebe17639a22765bc1ca12f": {
+            "format": "jpg",
+            "id": "458ce09003ebe17639a22765bc1ca12f",
+            "name": "thumbnail_IMG_6701.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6701.jpg",
+            "size": {
+                "width": 479,
+                "height": 390
+            },
+            "state": 2,
+            "type": 1
+        },
+        "79c66482d4b57c909398caa92184f77b": {
+            "format": "jpg",
+            "id": "79c66482d4b57c909398caa92184f77b",
+            "name": "thumbnail_IMG_6702.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6702.jpg",
+            "size": {
+                "width": 480,
+                "height": 450
+            },
+            "state": 2,
+            "type": 1
+        },
+        "a1a10d215d8549ff3e0904e2ee3e8bf2": {
+            "format": "jpg",
+            "id": "a1a10d215d8549ff3e0904e2ee3e8bf2",
+            "name": "thumbnail_IMG_6703.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6703.jpg",
+            "size": {
+                "width": 479,
+                "height": 452
+            },
+            "state": 2,
+            "type": 1
+        },
+        "d4df4cf927c228fe5b92f2b943dfc0ec": {
+            "format": "jpg",
+            "id": "d4df4cf927c228fe5b92f2b943dfc0ec",
+            "name": "thumbnail_IMG_6775.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_6775.jpg",
+            "size": {
+                "width": 480,
+                "height": 409
+            },
+            "state": 2,
+            "type": 1
+        },
+        "b13981eaeca6fc40cb6686fad1018930": {
+            "format": "jpg",
+            "id": "b13981eaeca6fc40cb6686fad1018930",
+            "name": "thumbnail_IMG_7372.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_7372.jpg",
+            "size": {
+                "width": 481,
+                "height": 640
+            },
+            "state": 2,
+            "type": 1
+        },
+        "4f4561d9f777797ad67c5b3126a09b19": {
+            "format": "jpg",
+            "id": "4f4561d9f777797ad67c5b3126a09b19",
+            "name": "thumbnail_IMG_7593.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_7593.jpg",
+            "size": {
+                "width": 481,
+                "height": 640
+            },
+            "state": 1,
+            "type": 1
+        },
+        "83c062758da284d147c908d069f488d0": {
+            "format": "jpg",
+            "id": "83c062758da284d147c908d069f488d0",
+            "name": "thumbnail_IMG_7594.jpg",
+            "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_7594.jpg",
+            "size": {
+                "width": 481,
+                "height": 640
+            },
+            "state": 1,
+            "type": 1
+        }
+    }
+}
