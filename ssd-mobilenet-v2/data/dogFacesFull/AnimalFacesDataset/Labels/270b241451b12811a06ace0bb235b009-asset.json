@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "270b241451b12811a06ace0bb235b009",
+        "name": "flickr_dog_000446.jpg",
+        "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/AnimalFacesDataset/Images/flickr_dog_000446.jpg",
+        "size": {
+            "width": 512,
+            "height": 512
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "r7ufgS8Bl",
+            "type": "RECTANGLE",
+            "tags": [
+                "Face"
+            ],
+            "boundingBox": {
+                "height": 339.20932286839667,
+                "width": 294.7406452734013,
+                "left": 116.59473470806303,
+                "top": 152.11545340013902
+            },
+            "points": [
+                {
+                    "x": 116.59473470806303,
+                    "y": 152.11545340013902
+                },
+                {
+                    "x": 411.3353799814643,
+                    "y": 152.11545340013902
+                },
+                {
+                    "x": 411.3353799814643,
+                    "y": 491.3247762685357
+                },
+                {
+                    "x": 116.59473470806303,
+                    "y": 491.3247762685357
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

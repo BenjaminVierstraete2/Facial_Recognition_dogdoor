@@ -1,0 +1,79 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "b7e92efbcb64ee83d8d2f529610d7c35",
+        "name": "thumbnail_25086.jpg",
+        "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_25086.jpg",
+        "size": {
+            "width": 480,
+            "height": 640
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "dzEgNK37O",
+            "type": "RECTANGLE",
+            "tags": [
+                "Face"
+            ],
+            "boundingBox": {
+                "height": 86.42927479147357,
+                "width": 86.11691469020396,
+                "left": 91.19200981149567,
+                "top": 253.18682934864455
+            },
+            "points": [
+                {
+                    "x": 91.19200981149567,
+                    "y": 253.18682934864455
+                },
+                {
+                    "x": 177.3089245016996,
+                    "y": 253.18682934864455
+                },
+                {
+                    "x": 177.3089245016996,
+                    "y": 339.6161041401181
+                },
+                {
+                    "x": 91.19200981149567,
+                    "y": 339.6161041401181
+                }
+            ]
+        },
+        {
+            "id": "VS7j8QmlF",
+            "type": "RECTANGLE",
+            "tags": [
+                "Face"
+            ],
+            "boundingBox": {
+                "height": 90.83537274096385,
+                "width": 99.00047802070453,
+                "left": 293.854898987948,
+                "top": 361.9860285492933
+            },
+            "points": [
+                {
+                    "x": 293.854898987948,
+                    "y": 361.9860285492933
+                },
+                {
+                    "x": 392.8553770086525,
+                    "y": 361.9860285492933
+                },
+                {
+                    "x": 392.8553770086525,
+                    "y": 452.82140129025714
+                },
+                {
+                    "x": 293.854898987948,
+                    "y": 452.82140129025714
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

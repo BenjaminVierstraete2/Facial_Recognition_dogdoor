@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "012071b09909f92384d557f577d8ab9f",
+        "name": "thumbnail_IMG_3498.jpg",
+        "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/thumbnail_IMG_3498.jpg",
+        "size": {
+            "width": 481,
+            "height": 640
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "_Z09jZ-FS",
+            "type": "RECTANGLE",
+            "tags": [
+                "Face"
+            ],
+            "boundingBox": {
+                "height": 97.95314672150138,
+                "width": 94.8951549224289,
+                "left": 165.88131469275007,
+                "top": 296.57089445522473
+            },
+            "points": [
+                {
+                    "x": 165.88131469275007,
+                    "y": 296.57089445522473
+                },
+                {
+                    "x": 260.776469615179,
+                    "y": 296.57089445522473
+                },
+                {
+                    "x": 260.776469615179,
+                    "y": 394.5240411767261
+                },
+                {
+                    "x": 165.88131469275007,
+                    "y": 394.5240411767261
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

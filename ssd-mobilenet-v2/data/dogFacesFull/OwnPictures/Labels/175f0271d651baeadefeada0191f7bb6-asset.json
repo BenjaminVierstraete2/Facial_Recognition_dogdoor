@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "JPEG",
+        "id": "175f0271d651baeadefeada0191f7bb6",
+        "name": "110628.JPEG",
+        "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/OwnPictures/Images/110628.JPEG",
+        "size": {
+            "width": 480,
+            "height": 640
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "YCfcdchNE",
+            "type": "RECTANGLE",
+            "tags": [
+                "Face"
+            ],
+            "boundingBox": {
+                "height": 202.3461031626506,
+                "width": 188.84682333513595,
+                "left": 151.2026204225896,
+                "top": 148.11598105161028
+            },
+            "points": [
+                {
+                    "x": 151.2026204225896,
+                    "y": 148.11598105161028
+                },
+                {
+                    "x": 340.04944375772556,
+                    "y": 148.11598105161028
+                },
+                {
+                    "x": 340.04944375772556,
+                    "y": 350.46208421426087
+                },
+                {
+                    "x": 151.2026204225896,
+                    "y": 350.46208421426087
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}

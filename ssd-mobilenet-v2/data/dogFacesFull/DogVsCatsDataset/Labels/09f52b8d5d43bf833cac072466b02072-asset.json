@@ -1,0 +1,48 @@
+{
+    "asset": {
+        "format": "jpg",
+        "id": "09f52b8d5d43bf833cac072466b02072",
+        "name": "10038.jpg",
+        "path": "file:C:/Users/viers/OneDrive/Bureaublad/ResearchProject/researchproject/FaceDetectionYolo/data/dogFacesFull/DogVsCatsDataset/Images/10038.jpg",
+        "size": {
+            "width": 500,
+            "height": 476
+        },
+        "state": 2,
+        "type": 1
+    },
+    "regions": [
+        {
+            "id": "HwKKVJUrk",
+            "type": "RECTANGLE",
+            "tags": [
+                "Face"
+            ],
+            "boundingBox": {
+                "height": 187.55144805483954,
+                "width": 166.43549084979037,
+                "left": 172.13702559576345,
+                "top": 118.98424515180615
+            },
+            "points": [
+                {
+                    "x": 172.13702559576345,
+                    "y": 118.98424515180615
+                },
+                {
+                    "x": 338.57251644555384,
+                    "y": 118.98424515180615
+                },
+                {
+                    "x": 338.57251644555384,
+                    "y": 306.5356932066457
+                },
+                {
+                    "x": 172.13702559576345,
+                    "y": 306.5356932066457
+                }
+            ]
+        }
+    ],
+    "version": "2.2.0"
+}
