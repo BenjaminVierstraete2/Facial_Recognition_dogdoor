@@ -1,7 +1,7 @@
 # researchproject
 
 <p align="center">
-  <img src="assets/detection_vid.gif" width="400" height="260">
+  <img src="assets/detection_vid.gif" width="480" height="270">
 </p>
 
 <p align="center">
