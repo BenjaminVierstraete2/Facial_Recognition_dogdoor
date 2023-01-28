@@ -12,7 +12,7 @@
 
 
 path = r"C:\Users\viers\OneDrive\Bureaublad\ResearchProject\researchproject\ssd-mobilenet-v2\data\dogFacesFull"
-targetPath = r"C:\Users\viers\OneDrive\Bureaublad\ResearchProject\researchproject\ssd-mobilenet-v2\data\processed"
+target_path = r"C:\Users\viers\OneDrive\Bureaublad\ResearchProject\researchproject\ssd-mobilenet-v2\data\processed"
 
 import os
 import json
@@ -54,10 +54,10 @@ print(len (faces))
 print(f"number of images with multiple faces: {len([i for i in faces if len(i) > 1])}")
 
 
-imgSize = (640,480)
+img_size = (640,480)
 
 #resize with padding
-def resizeWithPadding(img, size, boundingbox):
+def resize_with_padding(img, size, boundingbox):
     #get the ratio of the new image to the old image
     ratio = min(size[0]/img.shape[1], size[1]/img.shape[0])
     #get the new size of the image
@@ -93,10 +93,10 @@ i = 0
 for image in images:
 
     img = cv2.imread(image)
-    img, faces[i] = resizeWithPadding(img, imgSize, faces[i])
-    cv2.imwrite(targetPath + '\\Images\\' + str(i) + '.jpg', img)
+    img, faces[i] = resize_with_padding(img, img_size, faces[i])
+    cv2.imwrite(target_path + '\\Images\\' + str(i) + '.jpg', img)
     #write bounding boxes to txt file
-    with open(targetPath + '\\labels\\' + str(i) + '.txt', 'w') as f:
+    with open(target_path + '\\labels\\' + str(i) + '.txt', 'w') as f:
         for boundingBox in faces[i]:
             f.write(f"0 {boundingBox['left']} {boundingBox['top']} {boundingBox['width']} {boundingBox['height']} ")
     i += 1

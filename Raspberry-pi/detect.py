@@ -22,14 +22,14 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--threshold', help='Minimum confidence threshold for displaying detected objects',default=0.9)
 parser.add_argument('--distance', help='maximum minimum distance between detected face and faces in data',default=0.1)
 parser.add_argument('--resolution', help='resolution shown on desktop if view enabled',default='480x360')
-parser.add_argument('--view', help='Display video. This reduces FPS',default='True')
+parser.add_argument('--view', help='Display video.',action='store_true')
 parser.add_argument('--allowed', help='Allowed dogs',default='Muchu')
 parser.add_argument('--opentime', help='Time the door will be open',default='10')
 
 args = parser.parse_args()
 min_conf_threshold = float(args.threshold)
-resW, resH = args.resolution.split('x')
-imW, imH = int(resW), int(resH)
+res_width, res_height = args.resolution.split('x')
+image_width, image_height = int(res_width), int(res_height)
 min_dist_threshold = float(args.distance)
 view_stream = args.view 
 allowed_dogs = args.allowed.split(',')
@@ -44,16 +44,16 @@ recognitionmodel = os.path.join(os.getcwd(),'models/recognition.tflite')
 
 
 # load recognition model 
-interpreterRecognition = Interpreter(model_path=recognitionmodel)
-interpreterRecognition.allocate_tensors()
+interpreter_recognition = Interpreter(model_path=recognitionmodel)
+interpreter_recognition.allocate_tensors()
 
 # load detection model
-interpreterDetection = Interpreter(model_path=detectionmodel)
-interpreterDetection.allocate_tensors()
+interpreter_detection = Interpreter(model_path=detectionmodel)
+interpreter_detection.allocate_tensors()
 
 # Get detection model details
-input_details = interpreterDetection.get_input_details()
-output_details = interpreterDetection.get_output_details()
+input_details = interpreter_detection.get_input_details()
+output_details = interpreter_detection.get_output_details()
 height = input_details[0]['shape'][1]
 width = input_details[0]['shape'][2]
 
@@ -64,16 +64,16 @@ boxes_idx, classes_idx, scores_idx = 1, 3, 0
 
 #----- Load databases used for recognition -----#
 
-def readDatabase(file):
+def read_database(file):
     data = {}
     with open(file) as json_file:
         data = json.load(json_file)
     return data
 
-databaseFolder = "databases/"
-databaseEllie = readDatabase(databaseFolder + "databaseEllie.json")
-databaseMarley = readDatabase(databaseFolder + "databaseMarley.json")
-databaseMuchu = readDatabase(databaseFolder + "databaseMuchu.json")
+database_folder = "databases/"
+database_ellie = read_database(database_folder + "databaseEllie.json")
+database_marley = read_database(database_folder + "databaseMarley.json")
+database_muchu = read_database(database_folder + "databaseMuchu.json")
 
 
 # ----- Servos ----- #
@@ -87,11 +87,11 @@ servo2.min()
 
 # servo functions
 
-def openDoor():
+def open_door():
     servo1.value = -0.53
     servo2.max()
 
-def closeDoor():
+def close_door():
     servo1.max()
     servo2.min()
 
@@ -117,7 +117,7 @@ def verify(embedding, database, min_dist_threshold):
 # the name of the dog with the smallest distance is returned 
 def classify(embedding):
     distances = {}
-    for database in [databaseEllie, databaseMarley, databaseMuchu]:
+    for database in [database_ellie, database_marley, database_muchu]:
         dist, identity = verify(embedding, database, min_dist_threshold)
         distances[identity] = dist
     name = ''.join([i for i in min(distances, key=distances.get) if not i.isdigit()]).split("_")[0]
@@ -132,9 +132,9 @@ def check_dog(xyxy, image):
     crop_img = crop_img.reshape(1,256,256,3)
     crop_img = crop_img.astype('float32')/255.0
 
-    interpreterRecognition.set_tensor(interpreterRecognition.get_input_details()[0]['index'], crop_img)
-    interpreterRecognition.invoke()
-    embedding = interpreterRecognition.get_tensor(interpreterRecognition.get_output_details()[0]['index'])
+    interpreter_recognition.set_tensor(interpreter_recognition.get_input_details()[0]['index'], crop_img)
+    interpreter_recognition.invoke()
+    embedding = interpreter_recognition.get_tensor(interpreter_recognition.get_output_details()[0]['index'])
     name = classify(embedding)
     return name
 
@@ -179,10 +179,10 @@ class Camera:
 # Initialize frame rate calculation
 if view_stream:
     frame_rate_calc = 1
-    freq = cv2.getTickFrequency()
+    frequency = cv2.getTickFrequency()
 
 # Initialize camera stream
-camera = Camera(resolution=(imW,imH)).start()
+camera = Camera(resolution=(image_width,image_height)).start()
 time.sleep(1)
 
 #initialize variables
@@ -192,13 +192,13 @@ name = None
 while True:
     # Check if the door should be opened by looking at the predicted name of the last frame if any
     if name is not None and name.lower() in allowed_dogs:
-        openDoor()
+        open_door()
         time.sleep(time_open)
         name = None
 
     if view_stream:
         # Start timer (for calculating frame rate)
-        t1 = cv2.getTickCount()
+        start_time_frame = cv2.getTickCount()
 
     # Grab frame from video stream
     frame1 = camera.read()
@@ -214,22 +214,22 @@ while True:
 
 
     # Perform the detection 
-    interpreterDetection.set_tensor(input_details[0]['index'],input_data)
-    interpreterDetection.invoke()
+    interpreter_detection.set_tensor(input_details[0]['index'],input_data)
+    interpreter_detection.invoke()
 
     # results
-    boxes = interpreterDetection.get_tensor(output_details[boxes_idx]['index'])[0] # Bounding box coordinates of detected objects
-    classes = interpreterDetection.get_tensor(output_details[classes_idx]['index'])[0] # Class index of detected objects
-    scores = interpreterDetection.get_tensor(output_details[scores_idx]['index'])[0] # Confidence of detected objects
+    boxes = interpreter_detection.get_tensor(output_details[boxes_idx]['index'])[0] # Bounding box coordinates of detected objects
+    classes = interpreter_detection.get_tensor(output_details[classes_idx]['index'])[0] # Class index of detected objects
+    scores = interpreter_detection.get_tensor(output_details[scores_idx]['index'])[0] # Confidence of detected objects
 
     # Loop over detections 
     for i in range(len(scores)):
         if ((scores[i] > min_conf_threshold) and (scores[i] <= 1.0)):
             # Get bounding box coordinates and draw box
-            ymin = int(max(1,(boxes[i][0] * imH)))
-            xmin = int(max(1,(boxes[i][1] * imW)))
-            ymax = int(min(imH,(boxes[i][2] * imH)))
-            xmax = int(min(imW,(boxes[i][3] * imW)))
+            ymin = int(max(1,(boxes[i][0] * image_height)))
+            xmin = int(max(1,(boxes[i][1] * image_width)))
+            ymax = int(min(image_height,(boxes[i][2] * image_height)))
+            xmax = int(min(image_width,(boxes[i][3] * image_width)))
             xyxy = [xmin, ymin, xmax, ymax]
             name = check_dog(xyxy, frame)
 
@@ -237,9 +237,9 @@ while True:
                 #draw bounding box with detection confidence and predicted name
                 cv2.rectangle(frame, (xmin,ymin), (xmax,ymax), (10, 255, 0), 2)
                 label = '%s: %d%%' % (name, int(scores[i]*100)) 
-                labelSize, baseLine = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) 
-                label_ymin = max(ymin, labelSize[1] + 10) 
-                cv2.rectangle(frame, (xmin, label_ymin-labelSize[1]-10), (xmin+labelSize[0], label_ymin+baseLine-10), (255, 255, 255), cv2.FILLED) 
+                label_size, base_line = cv2.getTextSize(label, cv2.FONT_HERSHEY_SIMPLEX, 0.7, 2) 
+                label_ymin = max(ymin, label_size[1] + 10) 
+                cv2.rectangle(frame, (xmin, label_ymin-label_size[1]-10), (xmin+label_size[0], label_ymin+base_line-10), (255, 255, 255), cv2.FILLED) 
                 cv2.putText(frame, label, (xmin, label_ymin-7), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 0), 2) 
 
     # Draw framerate in corner of frame
@@ -247,16 +247,15 @@ while True:
         cv2.putText(frame,'FPS: {0:.2f}'.format(frame_rate_calc),(30,50),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,0),2,cv2.LINE_AA)
 
         # All the results have been drawn on the frame, so it's time to display it.
-        cv2.imshow('Object detector', frame)
-
+        cv2.imshow('Dog cam', frame)
         # Calculate framerate to display on next frame
-        t2 = cv2.getTickCount()
-        time1 = (t2-t1)/freq
-        frame_rate_calc= 1/time1
+        end_time_frame = cv2.getTickCount()
+        time_frame = (end_time_frame-start_time_frame)/frequency
+        frame_rate_calc= 1/time_frame
 
     #close the door if the dog is not in the allowed list or if no dog is detected
     if name is None or name.lower() not in allowed_dogs:
-        closeDoor()
+        close_door()
     
     # Press 'q' to quit
     if cv2.waitKey(1) == ord('q'):
