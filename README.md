@@ -1,7 +1,7 @@
 # researchproject
 
 <p align="center">
-  <img src="assets/detection_vid.gif" width="320" height="180">
+  <img src="assets/detection_vid.gif" width="400" height="260">
 </p>
 
 <p align="center">
@@ -9,6 +9,6 @@
 </p>
 
 <p align="center">
-  <img src="assets/locking_mechanism.gif" width="180" height="320">
+  <img src="assets/locking_mechanism.gif" width="240" height="380">
 </p>
 
