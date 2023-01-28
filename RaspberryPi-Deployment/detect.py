@@ -21,7 +21,7 @@ from gpiozero import Servo
 parser = argparse.ArgumentParser()
 parser.add_argument('--threshold', help='Minimum confidence threshold for displaying detected objects',default=0.9)
 parser.add_argument('--distance', help='maximum minimum distance between detected face and faces in data',default=0.1)
-parser.add_argument('--resolution', help='resolution shown on desktop if view enabled',default='480x360')
+parser.add_argument('--resolution', help='resolution shown on desktop if view enabled',default='576x432')
 parser.add_argument('--view', help='Display video.',action='store_true')
 parser.add_argument('--allowed', help='Allowed dogs',default='Muchu,Marley,Ellie')
 parser.add_argument('--opentime', help='Time the door will be open',default='10')
