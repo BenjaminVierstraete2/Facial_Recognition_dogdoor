@@ -23,7 +23,7 @@ parser.add_argument('--threshold', help='Minimum confidence threshold for displa
 parser.add_argument('--distance', help='maximum minimum distance between detected face and faces in data',default=0.1)
 parser.add_argument('--resolution', help='resolution shown on desktop if view enabled',default='480x360')
 parser.add_argument('--view', help='Display video.',action='store_true')
-parser.add_argument('--allowed', help='Allowed dogs',default='Muchu')
+parser.add_argument('--allowed', help='Allowed dogs',default='Muchu,Marley,Ellie')
 parser.add_argument('--opentime', help='Time the door will be open',default='10')
 
 args = parser.parse_args()
