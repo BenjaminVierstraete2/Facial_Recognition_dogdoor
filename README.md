@@ -35,6 +35,15 @@ The fully connected layer used for classification is removed, so we have a model
 ### SSD
 The SSD head is a set of one or more convolutional layers added to the model to predict bounding boxes instead of classifying. It employs a set of predefined bounding boxes, referred to as anchor boxes, to predict the location and class of objects in an input image. The SSD head combines the predictions from these anchor boxes with a non-maximum suppression (NMS) algorithm to produce the final detection results. This method of detection takes the extracted features and uses them to identify the location of objects in the image.
 
+The Single Shot Detector (SSD) works by:
+
+* Breaking down the input image into a grid of cells and running object detection on each cell. If no objects are detected, the cell is classified as the background class.
+* Using default bounding boxes, called anchor boxes, to predict the location and class of objects within each cell. During training, the algorithm matches the appropriate anchor box with the bounding boxes of each ground truth object within an image. The anchor box with the highest degree of overlap with an object is used to predict that object's class and location.
+
+
+![Example ssd](assets/ssd.png")
+> Image source: MobileNet version 2 by Matthijs Hollemans https://machinethink.net/blog/mobilenet-v2/
+
 ### FPN-lite
 
 FPN Lite is a lightweight version of the Feature Pyramid Network (FPN) architecture.
