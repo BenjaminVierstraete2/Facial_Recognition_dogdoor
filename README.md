@@ -32,6 +32,17 @@ It is used as the base network of the model to extract features
 
 The fully connected layer used for classification is removed, so we have a model that can extract features but leaves the spatial structure of the image.
 
+#### Why MobileNetV2?
+MobileNet V2 is designed to be lightweight and efficient, with a smaller number of parameters and lower computational requirements. Additionally, MobileNet uses depthwise separable convolutions, which can be implemented more efficiently on mobile and embedded devices.
+
+These depthwise seperable convolutions are the middel layer of the Bottleneck Residual Blocks used in Mobilenet V2
+The first layer is the expansion layer, a 1x1 convolution layer with the purpose to expand the number of channels in the data before moving on too depthwise convolution (explained below) and finally to the Bottleneck layer, this layer makes the number of channels smaller. 
+As the name suggest this block makes use of a residual connection to help with the flow of gradients through the network.
+More on residual blocks in the face recognition explanation.
+
+#### Depthwise separable convolutions 
+A standard convolutional layer applies a set of filters to the input, where each filter is responsible for detecting a specific feature in the input. In a depthwise separable convolution, the filters are applied separately to each channel of the input, rather than to the whole input. This results in a reduction in the number of parameters that need to be learned, and thus a decrease in computational cost.
+
 ### SSD
 The SSD head is a set of one or more convolutional layers added to the model to predict bounding boxes instead of classifying. It employs a set of predefined bounding boxes, referred to as anchor boxes, to predict the location and class of objects in an input image. The SSD head combines the predictions from these anchor boxes with a non-maximum suppression (NMS) algorithm to produce the final detection results. This method of detection takes the extracted features and uses them to identify the location of objects in the image.
 
@@ -58,7 +69,7 @@ The FPN Lite module is used to combine the output of the MobileNet v2 and SSD la
 
 ## Face recognition 
 
-For recognising wich dog face was detected i used a CNN network implementing techniques from FaceNet.
+For recognising which dog face was detected i used a CNN network implementing techniques from FaceNet.
 the techniques used are:
 * Triplet loss
 * Residual blocks (ResNet)
@@ -119,6 +130,9 @@ In the video below, you can observe the locking mechanism in action. As you can 
 <p align="center">
   <img src="assets/locking_mechanism.gif" width="480" height="760">
 </p>
+
+If u are interested in the prototype and how it is wired? See the Manuals folder for more information
+
 
 # Sources
 
