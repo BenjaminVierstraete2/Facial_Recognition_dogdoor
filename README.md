@@ -12,7 +12,7 @@ The objective of this project is to demonstrate the feasibility of automating a 
 ## Face detection
 The first step in recognizing a face in real-time is to detect the face itself. For this task, I selected the SSD-MobileNetV2-fpnlite model.
 
-I used a pre-trained model from the TensorFlow Object Detection API to transfer learn on data I labeled using the Visual Object Tagging Tool (VoTT). 
+I used a pre-trained model from the TensorFlow model garden to transfer learn on data I labeled using the Visual Object Tagging Tool (VoTT). 
 The original model was trained on the COCO 2017 dataset.
 
 
@@ -20,16 +20,33 @@ the model config can be found: https://github.com/tensorflow/models/blob/master/
 
 
 ### SSD-MobileNetV2-fpnlite
-in this model 3 networks are being used 
-* MobileNet-v2 as the base network
-* SSD (Single Shot Detection) as the detection network
-* FPN-Lite (Feature Pyramid Network) as the feature extractor
+this model consist of 3 parts
+* MobileNet-v2 as the backbone network used for feature extraction
+* SSD head (Single Shot Detection) for detection
+* FPN-Lite (Feature Pyramid Network) to combine the output of the MobileNet v2 and SSD layers
 
 
 ### MobileNet-v2
 MobileNet is a light-weight neural network architecture designed for mobile and embedded devices. It is designed to be efficient in terms of memory and computational resources, making it well-suited for use on devices with limited resources.
+It is used as the base network of the model to extract features
 
-## Face recognition
+The fully connected layer used for classification is removed, so we have a model that can extract features but leaves the spatial structure of the image.
+
+### SSD
+The SSD head is a set of one or more convolutional layers added to the model to predict bounding boxes instead of classifying. It employs a set of predefined bounding boxes, referred to as anchor boxes, to predict the location and class of objects in an input image. The SSD head combines the predictions from these anchor boxes with a non-maximum suppression (NMS) algorithm to produce the final detection results. This method of detection takes the extracted features and uses them to identify the location of objects in the image.
+
+### FPN-lite
+
+By combining features from multiple scales, the FPN Lite module provides the object detector with additional contextual information that can help improve the accuracy of the object detections.
+
+#### Example:
+<p align="center">
+  <img src="assets/mobilenet_example.png">
+</p>
+
+
+
+## Face recognition 
 
 
 # Does it work?
@@ -50,3 +67,5 @@ In the video below, you can observe the locking mechanism in action. As you can 
 </p>
 
 # Sources
+
+https://github.com/tensorflow/models
