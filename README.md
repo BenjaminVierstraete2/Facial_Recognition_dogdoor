@@ -58,6 +58,50 @@ The FPN Lite module is used to combine the output of the MobileNet v2 and SSD la
 
 ## Face recognition 
 
+For recognising wich dog face was detected i used a CNN network implementing techniques from FaceNet.
+the techniques used are:
+* Triplet loss
+* Residual blocks (ResNet)
+
+## Triplet loss
+The idea behind triplet loss is to train the network to produce embeddings such that similar examples are close together in the embedding space, while dissimilar examples are far apart.
+The triplet loss is calculated using three inputs: an anchor image, a positive image, and a negative image. Anchor and positive are selected from the same class, while negative is selected from a different class. The goal of the network is to minimize the distance between images from the same class and maximize the distance with other classes.
+
+<p align="center">
+  <img src="assets/tripletloss.gif">
+</p>
+
+> Image Source: Face Recognition with FaceNet and MTCNN by Luka Dulčić https://arsfutura.com/magazine/face-recognition-with-facenet-and-mtcnn/
+
+### Online triplet generation
+As outlined in the FaceNet paper (https://arxiv.org/abs/1503.03832), if faces are mislabeled or poorly imaged, they can dominate the hard positives and negatives. Despite my data being limited and well-labeled, I employed online triplet generation to select hard positive and negative triplets within a mini-batch. Hard triplets are defined as those where the positive image is closer to the negative image than to the anchor image. This technique helps to improve the robustness of the model against poorly imaged or mislabeled faces.
+
+## Residual blocks
+In a standard neural network architecture, the output of one layer is passed as input to the next layer in the sequence. However, in a network with residual blocks, the output of a layer is passed not only to the next layer but also to one or more layers further down the chain, bypassing one or more intermediate layers. This allows for the flow of information to be retained and reused throughout the network, rather than being lost or distorted as it passes through multiple layers.
+
+why use these?
+to help alleviate the problem of vanishing gradients. when training networks with many layers the gradients of the parameters with respect to the loss become very small, making it difficult for the network to learn.
+Residual blocks address this problem by allowing the gradients to flow more easily through the network by using a residual connection for the gradients to flow through which bypasses one or more layers and allows the input to be added directly to the output of a layer several layers deeper in the network. This helps to retain information and gradients throughout the network.
+
+### Example Residual block in my model:
+<p align="center">
+  <img src="assets/resblock.png">
+</p>
+
+> Find full model: https://github.com/BenjaminVierstraete2/Facial_Recognition_dogdoor/blob/main/FaceRecognition/models/model_plot.png
+
+### Predicting:
+
+Finally, the output of the model is a vector storing 128 embeddings. These embeddings are values assigned to the face. A database was made for each dog using these embeddings. This is used to predict new embeddings by measuring the minimum distance found when comparing to the database. When testing the model without a threshold, it scored 100% on the limited data of 33 test images. However, the score dropped to about 88% when introducing a minimum threshold of 0.5, meaning the dog is only classified if the minimum distance found is smaller then the threshold given.
+
+#### Example predictions:
+<p align="center">
+  <img src="assets/predictions_face.png">
+</p>
+
+
+
+
 
 # Does it work?
 This is a demonstration of the model in action. The frame rate for detection is approximately 0.7, which decreases when a detected face is being processed. To determine if this model can function in real-time, we must evaluate the time it takes for each detection. If the detection process takes longer than 2 seconds, it may impact the functionality of the dog door.
