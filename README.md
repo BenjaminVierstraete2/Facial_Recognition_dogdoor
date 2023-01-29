@@ -190,6 +190,8 @@ Face Recognition Walkthrough--FaceNet https://www.pluralsight.com/guides/face-re
 
 A Low-Cost Raspberry Pi-based System for Facial Recognition. https://web.p.ebscohost.com/ehost/detail/detail?vid=0&sid=20f3ec70-9892-4c13-9e7e-68f23e4706b0%40redis&bdata=JkF1dGhUeXBlPXNzbyZzaXRlPWVob3N0LWxpdmU%3d#AN=154571914&db=asn
 
+What’s the Difference Between Haar-Feature Classifiers and Convolutional Neural Networks? https://towardsdatascience.com/whats-the-difference-between-haar-feature-classifiers-and-convolutional-neural-networks-ce6828343aeb
+
 ## Other
 
 Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796
