@@ -13,8 +13,9 @@ The objective of this project is to demonstrate the feasibility of automating a 
 The first step in recognizing a face in real-time is to detect the face itself. For this task, I selected the SSD-MobileNetV2-fpnlite model.
 
 I used a pre-trained model from the TensorFlow model garden to transfer learn on data I labeled using the Visual Object Tagging Tool (VoTT). 
-The original model was trained on the COCO 2017 dataset.
 
+The original model was trained on the COCO 2017 dataset.
+The data used for transfer learning is a mix of the CatsVsDogs dataset and Animalfaces dataset, both linked below in sources.
 
 the model config can be found: https://github.com/tensorflow/models/blob/master/research/object_detection/configs/tf2/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.config 
 
@@ -105,14 +106,36 @@ Residual blocks address this problem by allowing the gradients to flow more easi
 
 Finally, the output of the model is a vector storing 128 embeddings. These embeddings are values assigned to the face. A database was made for each dog using these embeddings. This is used to predict new embeddings by measuring the minimum distance found when comparing to the database. When testing the model without a threshold, it scored 100% on the limited data of 33 test images. However, the score dropped to about 88% when introducing a minimum threshold of 0.5, meaning the dog is only classified if the minimum distance found is smaller then the threshold given.
 
+
 #### Example predictions:
 <p align="center">
   <img src="assets/predictions_face.png">
 </p>
 
+# Tensorflow lite
+
+Both models were converted into tensorflow lite models.
+TensorFlow Lite is a lightweight version of TensorFlow that is specifically designed for mobile and embedded devices. It is a good choice for running machine learning models on a Raspberry Pi, as it is optimized for low-power and resource-constrained devices. 
+TensorFlow Lite uses a smaller, more efficient binary format for model storage.
+
+#### Benchmark test on Tensorflow (left) and Tensorflow lite (right) in Interference speed (ms)
+<p align="center">
+  <img src="assets/benchmarkTfvsTflite.png">
+</p>
+
+> Image Source: Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi by Alasdair Allan https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796
 
 
+# Autopreprocessing model
 
+I initially made a poor choice in my object detection model for my Raspberry Pi application because I was primarily focused on recognition. After training a YOLOv7 model on the same data, I realized that while it was more accurate, it was also much more computationally expensive and difficult to convert to TensorFlow Lite, making it a less suitable choice for embedded detection in comparison to SSD-MobileNetV2. Despite this, YOLOv7 can still be useful for object detection on devices with powerful GPUs or in cloud-based applications. 
+
+Using this trained model i developed an automatic preprocessor that generates faces for training the recognition model. By simply providing a folder with images of dogs, the preprocessor will output all detected faces into a separate folder, leaving only the moving of the good faces into a labeled folder and removing off poor images.
+
+### Output:
+<p align="center">
+  <img src="assets/preprocess.png">
+</p>
 
 # Does it work?
 This is a demonstration of the model in action. The frame rate for detection is approximately 0.7, which decreases when a detected face is being processed. To determine if this model can function in real-time, we must evaluate the time it takes for each detection. If the detection process takes longer than 2 seconds, it may impact the functionality of the dog door.
@@ -131,9 +154,14 @@ In the video below, you can observe the locking mechanism in action. As you can 
   <img src="assets/locking_mechanism.gif" width="480" height="760">
 </p>
 
-If u are interested in the prototype and how it is wired? See the Manuals folder for more information
-
+If u are interested in the prototype and how it is wired? See the manuals folder for more information.
 
 # Sources
 
+## object detection sources
+
 https://github.com/tensorflow/models
+
+## Face recognition sources
+
+## Other
