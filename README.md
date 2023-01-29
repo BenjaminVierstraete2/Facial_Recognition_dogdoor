@@ -2,6 +2,8 @@
 
 The objective of this project is to demonstrate the feasibility of automating a dog door by using dog recognition technology to determine which dog is outside and if it is permitted to enter.
 
+The project was realized using a Raspberry Pi model 3b+ using a camera module v2.
+
 ## Introducing test subjects
 
 <p align="center">
@@ -158,10 +160,48 @@ If u are interested in the prototype and how it is wired? See the manuals folder
 
 # Sources
 
-## object detection sources
+## Object detection sources
 
-https://github.com/tensorflow/models
+Tensorflow garden https://github.com/tensorflow/models
+
+MobileNet version 2 https://machinethink.net/blog/mobilenet-v2/
+
+TensorFlow Lite Object Detection on Android and Raspberry Pi https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi
+
+MobileNetV2 SSD FPN https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/mobilenetv2-ssd-fpn
+
+How single-shot detector (SSD) works? https://developers.arcgis.com/python/guide/how-ssd-works/
+
+
 
 ## Face recognition sources
 
+Residual blocks — Building blocks of ResNet https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec
+
+DogFaceNet https://github.com/GuillaumeMougeot/DogFaceNet
+
+FaceNet: A Unified Embedding for Face Recognition and Clustering https://arxiv.org/pdf/1503.03832.pdf
+
+What is the Best Facial Recognition Software to Use in 2022? https://towardsdatascience.com/what-is-the-best-facial-recognition-software-to-use-in-2021-10f0fac51409
+
+Introduction to FaceNet: A Unified Embedding for Face Recognition and Clustering https://medium.com/analytics-vidhya/introduction-to-facenet-a-unified-embedding-for-face-recognition-and-clustering-dbdac8e6f02
+
+Face Recognition Walkthrough--FaceNet https://www.pluralsight.com/guides/face-recognition-walkthrough-facenet
+
+A Low-Cost Raspberry Pi-based System for Facial Recognition. https://web.p.ebscohost.com/ehost/detail/detail?vid=0&sid=20f3ec70-9892-4c13-9e7e-68f23e4706b0%40redis&bdata=JkF1dGhUeXBlPXNzbyZzaXRlPWVob3N0LWxpdmU%3d#AN=154571914&db=asn
+
 ## Other
+
+Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796
+
+Convert TensorFlow models https://www.tensorflow.org/lite/models/convert/convert_models
+
+## Data
+
+Animal Faces https://www.kaggle.com/datasets/andrewmvd/animal-faces
+
+Cat and Dog https://www.kaggle.com/datasets/tongpython/cat-and-dog
+
+
+
+
