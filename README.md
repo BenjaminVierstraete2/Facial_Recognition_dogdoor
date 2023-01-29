@@ -37,7 +37,8 @@ The SSD head is a set of one or more convolutional layers added to the model to 
 
 ### FPN-lite
 
-By combining features from multiple scales, the FPN Lite module provides the object detector with additional contextual information that can help improve the accuracy of the object detections.
+FPN Lite is a lightweight version of the Feature Pyramid Network (FPN) architecture.
+The FPN Lite module is used to combine the output of the MobileNet v2 and SSD layers, by combining features from multiple scales, the FPN Lite module provides the object detector with additional contextual information that can help improve the accuracy of the object detections.
 
 #### Example:
 <p align="center">
