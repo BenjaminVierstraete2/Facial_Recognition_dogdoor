@@ -41,7 +41,7 @@ The Single Shot Detector (SSD) works by:
 * Using default bounding boxes, called anchor boxes, to predict the location and class of objects within each cell. During training, the algorithm matches the appropriate anchor box with the bounding boxes of each ground truth object within an image. The anchor box with the highest degree of overlap with an object is used to predict that object's class and location.
 
 
-![Example ssd](assets/ssd.png")
+![Example ssd](assets/ssd.png)
 > Image source: MobileNet version 2 by Matthijs Hollemans https://machinethink.net/blog/mobilenet-v2/
 
 ### FPN-lite
