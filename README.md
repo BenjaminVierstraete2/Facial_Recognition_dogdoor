@@ -162,47 +162,71 @@ If u are interested in the prototype and how it is wired? See the manuals folder
 
 ## Object detection sources
 
-Tensorflow garden https://github.com/tensorflow/models
 
-MobileNet version 2 https://machinethink.net/blog/mobilenet-v2/
+[1] ‘Welcome to the Model Garden for TensorFlow’. tensorflow, Jan. 30, 2023. Accessed: Jan. 20, 2023. [Online]. Available: https://github.com/tensorflow/models
 
-TensorFlow Lite Object Detection on Android and Raspberry Pi https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi
+[2] ‘MobileNet version 2’. https://machinethink.net/blog/mobilenet-v2/ (accessed Jan. 21, 2023).
 
-MobileNetV2 SSD FPN https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/mobilenetv2-ssd-fpn
+[3] Evan, ‘TensorFlow Lite Object Detection on Android and Raspberry Pi’. Jan. 20, 2023. Accessed: Jan. 20, 2023. [Online]. Available: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi
 
-How single-shot detector (SSD) works? https://developers.arcgis.com/python/guide/how-ssd-works/
+[4] ‘MobileNetV2 SSD FPN’. https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/mobilenetv2-ssd-fpn (accessed Jan. 20, 2023).
 
+[5] ‘How single-shot detector (SSD) works?’, ArcGIS API for Python. https://developers.arcgis.com/python/guide/how-ssd-works/ (accessed Jan. 23, 2023).
 
+[6] N. Wongsirikul, ‘YOLO Model Compression via Filter Pruning for Efficient Inference on Raspberry Pi’, Medium, Nov. 30, 2021. https://medium.com/@wongsirikuln/yolo-model-compression-via-filter-pruning-for-efficient-inference-on-raspberry-pi-c8e53d995d81 (accessed Jan. 18, 2023).
+
+[7] Pluviophile, ‘Answer to “What is the architecture of ssd_mobilenet_v2_fpnlite_640x640?”’, Data Science Stack Exchange, Dec. 07, 2022. https://datascience.stackexchange.com/a/116807 (accessed Jan. 22, 2023).
 
 ## Face recognition sources
 
-Residual blocks — Building blocks of ResNet https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec
+[8] S. Sahoo, ‘Residual blocks — Building blocks of ResNet’, Medium, Sep. 26, 2022. https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec (accessed Jan. 29, 2023).
 
-DogFaceNet https://github.com/GuillaumeMougeot/DogFaceNet
+[9] G. Mougeot, D. Li, and S. Jia, ‘A Deep Learning Approach for Dog Face Verification and Recognition’, in PRICAI 2019: Trends in Artificial Intelligence, Cham, 2019, pp. 418–430. doi: 10.1007/978-3-030-29894-4_34.
 
-FaceNet: A Unified Embedding for Face Recognition and Clustering https://arxiv.org/pdf/1503.03832.pdf
+[10] F. Schroff, D. Kalenichenko, and J. Philbin, ‘FaceNet: A Unified Embedding for Face Recognition and Clustering’, in 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Jun. 2015, pp. 815–823. doi: 10.1109/CVPR.2015.7298682.
 
-What is the Best Facial Recognition Software to Use in 2022? https://towardsdatascience.com/what-is-the-best-facial-recognition-software-to-use-in-2021-10f0fac51409
+[11] C. Miranda Orostegui, A. Navarro Luna, A. Manjarrés García, and C. A. Fajardo Ariza, ‘A Low-Cost Raspberry Pi-based System for Facial Recognition: Sistema de reconocimiento facial sin reentrenamiento para nuevos usuarios.’, Ingeniería y Ciencia, vol. 17, no. 34, pp. 77–95, Jul. 2021, doi: 10.17230/ingciencia.17.34.4.
 
-Introduction to FaceNet: A Unified Embedding for Face Recognition and Clustering https://medium.com/analytics-vidhya/introduction-to-facenet-a-unified-embedding-for-face-recognition-and-clustering-dbdac8e6f02
+[12] P. D. Alexander and D. J. Craighead, ‘A novel camera trapping method for individually identifying pumas by facial features’, Ecology and Evolution, vol. 12, no. 1, p. e8536, 2022, doi: 10.1002/ece3.8536.
 
-Face Recognition Walkthrough--FaceNet https://www.pluralsight.com/guides/face-recognition-walkthrough-facenet
+[13] ‘Face Recognition Walkthrough--FaceNet | Pluralsight’. https://app.pluralsight.com/guides/face-recognition-walkthrough-facenet (accessed Jan. 09, 2023).
 
-A Low-Cost Raspberry Pi-based System for Facial Recognition. https://web.p.ebscohost.com/ehost/detail/detail?vid=0&sid=20f3ec70-9892-4c13-9e7e-68f23e4706b0%40redis&bdata=JkF1dGhUeXBlPXNzbyZzaXRlPWVob3N0LWxpdmU%3d#AN=154571914&db=asn
+[14] ‘Face Recognition Python* Demo — OpenVINO™ documentation — Version(latest)’. https://docs.openvino.ai/latest/omz_demos_face_recognition_demo_python.html#doxid-omz-demos-face-recognition-demo-python (accessed Jan. 11, 2023).
 
-What’s the Difference Between Haar-Feature Classifiers and Convolutional Neural Networks? https://towardsdatascience.com/whats-the-difference-between-haar-feature-classifiers-and-convolutional-neural-networks-ce6828343aeb
+[15] D. Kumar, ‘Introduction to FaceNet : A Unified Embedding for Face Recognition and Clustering’, Analytics Vidhya, Jun. 21, 2020. https://medium.com/analytics-vidhya/introduction-to-facenet-a-unified-embedding-for-face-recognition-and-clustering-dbdac8e6f02 (accessed Jan. 13, 2023).
+
+[16] ‘Face Recognition With Raspberry Pi and OpenCV - Tutorial Australia’, Core Electronics. https://core-electronics.com.au/guides/raspberry-pi/face-identify-raspberry-pi/ (accessed Nov. 10, 2022).
+
+[17] ‘Face Recognition with FaceNet and MTCNN’. https://arsfutura.com/magazine/face-recognition-with-facenet-and-mtcnn/ (accessed Jan. 29, 2023).
+
+[18] N. Samsudin, ‘Building a dog search engine with FaceNet’, Analytics Vidhya, Oct. 15, 2020. https://medium.com/analytics-vidhya/building-a-dog-search-engine-with-facenet-65d1ae79dd8a (accessed Jan. 09, 2023).
+
+[19] M. Saini, ‘Train FaceNet with triplet loss for real time face recognition…’, Medium, Jul. 20, 2019. https://medium.com/@mohitsaini_54300/train-facenet-with-triplet-loss-for-real-time-face-recognition-a39e2f4472c3 (accessed Jan. 12, 2023).
+
+[20] S. Pospielov, ‘What is the Best Facial Recognition Software to Use in 2022?’, Medium, Jul. 07, 2022. https://towardsdatascience.com/what-is-the-best-facial-recognition-software-to-use-in-2021-10f0fac51409 (accessed Nov. 09, 2022).
+
+[21] C.-F. Wang, ‘What’s the Difference Between Haar-Feature Classifiers and Convolutional Neural Networks?’, Medium, Aug. 04, 2018. 
+https://towardsdatascience.com/whats-the-difference-between-haar-feature-classifiers-and-convolutional-neural-networks-ce6828343aeb (accessed Jan. 20, 2023).
+
+[22] O. Moindrot, ‘Triplet Loss and Online Triplet Mining in TensorFlow’, Olivier Moindrot blog, Mar. 19, 2018. https://omoindrot.github.io/triplet-loss (accessed Jan. 23, 2023).
 
 ## Other
 
-Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796
+[23] ‘Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi’, Hackster.io. https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796 (accessed Jan. 29, 2023).
 
-Convert TensorFlow models https://www.tensorflow.org/lite/models/convert/convert_models
+[24] ‘Convert TensorFlow models | TensorFlow Lite’, TensorFlow. https://www.tensorflow.org/lite/models/convert/convert_models (accessed Jan. 22, 2023).
+
+[25] Q-engineering, ‘Deep learning with Raspberry Pi and alternatives in 2022 - Q-engineering’. https://qengineering.eu/deep-learning-with-raspberry-pi-and-alternatives.html (accessed Nov. 09, 2022).
+
+[26] Q-engineering, ‘Embedded vision - Q-engineering’. https://qengineering.eu/embedded-vision.html (accessed Nov. 09, 2022).
+
 
 ## Data
 
-Animal Faces https://www.kaggle.com/datasets/andrewmvd/animal-faces
+[27] ‘Cat and Dog’. https://www.kaggle.com/datasets/tongpython/cat-and-dog (accessed Jan. 09, 2023).
 
-Cat and Dog https://www.kaggle.com/datasets/tongpython/cat-and-dog
+[28] ‘Animal Faces’. https://www.kaggle.com/datasets/andrewmvd/animal-faces (accessed Jan. 09, 2023).
+
 
 
 
