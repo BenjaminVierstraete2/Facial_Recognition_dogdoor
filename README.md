@@ -210,22 +210,25 @@ https://towardsdatascience.com/whats-the-difference-between-haar-feature-classif
 
 [22] O. Moindrot, ‘Triplet Loss and Online Triplet Mining in TensorFlow’, Olivier Moindrot blog, Mar. 19, 2018. https://omoindrot.github.io/triplet-loss (accessed Jan. 23, 2023).
 
+[23] T. A. Team, ‘The Strengths & Weaknesses of Face2Vec (FaceNet) – Towards AI’. https://towardsai.net/p/computer-vision/the-strengths-weaknesses-of-face2vec-facenet, https://towardsai.net/p/computer-vision/the-strengths-weaknesses-of-face2vec-facenet (accessed Jan. 10, 2023).
+
+
 ## Other
 
-[23] ‘Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi’, Hackster.io. https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796 (accessed Jan. 29, 2023).
+[24] ‘Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi’, Hackster.io. https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796 (accessed Jan. 29, 2023).
 
-[24] ‘Convert TensorFlow models | TensorFlow Lite’, TensorFlow. https://www.tensorflow.org/lite/models/convert/convert_models (accessed Jan. 22, 2023).
+[25] ‘Convert TensorFlow models | TensorFlow Lite’, TensorFlow. https://www.tensorflow.org/lite/models/convert/convert_models (accessed Jan. 22, 2023).
 
-[25] Q-engineering, ‘Deep learning with Raspberry Pi and alternatives in 2022 - Q-engineering’. https://qengineering.eu/deep-learning-with-raspberry-pi-and-alternatives.html (accessed Nov. 09, 2022).
+[26] Q-engineering, ‘Deep learning with Raspberry Pi and alternatives in 2022 - Q-engineering’. https://qengineering.eu/deep-learning-with-raspberry-pi-and-alternatives.html (accessed Nov. 09, 2022).
 
-[26] Q-engineering, ‘Embedded vision - Q-engineering’. https://qengineering.eu/embedded-vision.html (accessed Nov. 09, 2022).
+[27] Q-engineering, ‘Embedded vision - Q-engineering’. https://qengineering.eu/embedded-vision.html (accessed Nov. 09, 2022).
 
 
 ## Data
 
-[27] ‘Cat and Dog’. https://www.kaggle.com/datasets/tongpython/cat-and-dog (accessed Jan. 09, 2023).
+[28] ‘Cat and Dog’. https://www.kaggle.com/datasets/tongpython/cat-and-dog (accessed Jan. 09, 2023).
 
-[28] ‘Animal Faces’. https://www.kaggle.com/datasets/andrewmvd/animal-faces (accessed Jan. 09, 2023).
+[29] ‘Animal Faces’. https://www.kaggle.com/datasets/andrewmvd/animal-faces (accessed Jan. 09, 2023).
 
 
 
