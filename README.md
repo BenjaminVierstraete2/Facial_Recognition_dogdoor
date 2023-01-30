@@ -2,6 +2,8 @@
 
 The objective of this project is to demonstrate the feasibility of automating a dog door by using dog recognition technology to determine which dog is outside and if it is permitted to enter.
 
+The project was realized using a Raspberry Pi model 3b+ using a camera module v2.
+
 ## Introducing test subjects
 
 <p align="center">
@@ -13,8 +15,9 @@ The objective of this project is to demonstrate the feasibility of automating a 
 The first step in recognizing a face in real-time is to detect the face itself. For this task, I selected the SSD-MobileNetV2-fpnlite model.
 
 I used a pre-trained model from the TensorFlow model garden to transfer learn on data I labeled using the Visual Object Tagging Tool (VoTT). 
-The original model was trained on the COCO 2017 dataset.
 
+The original model was trained on the COCO 2017 dataset.
+The data used for transfer learning is a mix of the CatsVsDogs dataset and Animalfaces dataset, both linked below in sources.
 
 the model config can be found: https://github.com/tensorflow/models/blob/master/research/object_detection/configs/tf2/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.config 
 
@@ -105,14 +108,36 @@ Residual blocks address this problem by allowing the gradients to flow more easi
 
 Finally, the output of the model is a vector storing 128 embeddings. These embeddings are values assigned to the face. A database was made for each dog using these embeddings. This is used to predict new embeddings by measuring the minimum distance found when comparing to the database. When testing the model without a threshold, it scored 100% on the limited data of 33 test images. However, the score dropped to about 88% when introducing a minimum threshold of 0.5, meaning the dog is only classified if the minimum distance found is smaller then the threshold given.
 
+
 #### Example predictions:
 <p align="center">
   <img src="assets/predictions_face.png">
 </p>
 
+# Tensorflow lite
+
+Both models were converted into tensorflow lite models.
+TensorFlow Lite is a lightweight version of TensorFlow that is specifically designed for mobile and embedded devices. It is a good choice for running machine learning models on a Raspberry Pi, as it is optimized for low-power and resource-constrained devices. 
+TensorFlow Lite uses a smaller, more efficient binary format for model storage.
+
+#### Benchmark test on Tensorflow (left) and Tensorflow lite (right) in Interference speed (ms)
+<p align="center">
+  <img src="assets/benchmarkTfvsTflite.png">
+</p>
+
+> Image Source: Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi by Alasdair Allan https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796
 
 
+# Autopreprocessing model
 
+I initially made a poor choice in my object detection model for my Raspberry Pi application because I was primarily focused on recognition. After training a YOLOv7 model on the same data, I realized that while it was more accurate, it was also much more computationally expensive and difficult to convert to TensorFlow Lite, making it a less suitable choice for embedded detection in comparison to SSD-MobileNetV2. Despite this, YOLOv7 can still be useful for object detection on devices with powerful GPUs or in cloud-based applications. 
+
+Using this trained model i developed an automatic preprocessor that generates faces for training the recognition model. By simply providing a folder with images of dogs, the preprocessor will output all detected faces into a separate folder, leaving only the moving of the good faces into a labeled folder and removing off poor images.
+
+### Output:
+<p align="center">
+  <img src="assets/preprocess.png">
+</p>
 
 # Does it work?
 This is a demonstration of the model in action. The frame rate for detection is approximately 0.7, which decreases when a detected face is being processed. To determine if this model can function in real-time, we must evaluate the time it takes for each detection. If the detection process takes longer than 2 seconds, it may impact the functionality of the dog door.
@@ -131,9 +156,84 @@ In the video below, you can observe the locking mechanism in action. As you can 
   <img src="assets/locking_mechanism.gif" width="480" height="760">
 </p>
 
-If u are interested in the prototype and how it is wired? See the Manuals folder for more information
-
+If u are interested in the prototype and how it is wired? See the manuals folder for more information.
 
 # Sources
 
-https://github.com/tensorflow/models
+## Object detection sources
+
+
+[1] ‘Welcome to the Model Garden for TensorFlow’. tensorflow, Jan. 30, 2023. Accessed: Jan. 20, 2023. [Online]. Available: https://github.com/tensorflow/models
+
+[2] ‘MobileNet version 2’. https://machinethink.net/blog/mobilenet-v2/ (accessed Jan. 21, 2023).
+
+[3] Evan, ‘TensorFlow Lite Object Detection on Android and Raspberry Pi’. Jan. 20, 2023. Accessed: Jan. 20, 2023. [Online]. Available: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi
+
+[4] ‘MobileNetV2 SSD FPN’. https://docs.edgeimpulse.com/docs/edge-impulse-studio/learning-blocks/object-detection/mobilenetv2-ssd-fpn (accessed Jan. 20, 2023).
+
+[5] ‘How single-shot detector (SSD) works?’, ArcGIS API for Python. https://developers.arcgis.com/python/guide/how-ssd-works/ (accessed Jan. 23, 2023).
+
+[6] N. Wongsirikul, ‘YOLO Model Compression via Filter Pruning for Efficient Inference on Raspberry Pi’, Medium, Nov. 30, 2021. https://medium.com/@wongsirikuln/yolo-model-compression-via-filter-pruning-for-efficient-inference-on-raspberry-pi-c8e53d995d81 (accessed Jan. 18, 2023).
+
+[7] Pluviophile, ‘Answer to “What is the architecture of ssd_mobilenet_v2_fpnlite_640x640?”’, Data Science Stack Exchange, Dec. 07, 2022. https://datascience.stackexchange.com/a/116807 (accessed Jan. 22, 2023).
+
+## Face recognition sources
+
+[8] S. Sahoo, ‘Residual blocks — Building blocks of ResNet’, Medium, Sep. 26, 2022. https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec (accessed Jan. 29, 2023).
+
+[9] G. Mougeot, D. Li, and S. Jia, ‘A Deep Learning Approach for Dog Face Verification and Recognition’, in PRICAI 2019: Trends in Artificial Intelligence, Cham, 2019, pp. 418–430. doi: 10.1007/978-3-030-29894-4_34.
+
+[10] F. Schroff, D. Kalenichenko, and J. Philbin, ‘FaceNet: A Unified Embedding for Face Recognition and Clustering’, in 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Jun. 2015, pp. 815–823. doi: 10.1109/CVPR.2015.7298682.
+
+[11] C. Miranda Orostegui, A. Navarro Luna, A. Manjarrés García, and C. A. Fajardo Ariza, ‘A Low-Cost Raspberry Pi-based System for Facial Recognition: Sistema de reconocimiento facial sin reentrenamiento para nuevos usuarios.’, Ingeniería y Ciencia, vol. 17, no. 34, pp. 77–95, Jul. 2021, doi: 10.17230/ingciencia.17.34.4.
+
+[12] P. D. Alexander and D. J. Craighead, ‘A novel camera trapping method for individually identifying pumas by facial features’, Ecology and Evolution, vol. 12, no. 1, p. e8536, 2022, doi: 10.1002/ece3.8536.
+
+[13] ‘Face Recognition Walkthrough--FaceNet | Pluralsight’. https://app.pluralsight.com/guides/face-recognition-walkthrough-facenet (accessed Jan. 09, 2023).
+
+[14] ‘Face Recognition Python* Demo — OpenVINO™ documentation — Version(latest)’. https://docs.openvino.ai/latest/omz_demos_face_recognition_demo_python.html#doxid-omz-demos-face-recognition-demo-python (accessed Jan. 11, 2023).
+
+[15] D. Kumar, ‘Introduction to FaceNet : A Unified Embedding for Face Recognition and Clustering’, Analytics Vidhya, Jun. 21, 2020. https://medium.com/analytics-vidhya/introduction-to-facenet-a-unified-embedding-for-face-recognition-and-clustering-dbdac8e6f02 (accessed Jan. 13, 2023).
+
+[16] ‘Face Recognition With Raspberry Pi and OpenCV - Tutorial Australia’, Core Electronics. https://core-electronics.com.au/guides/raspberry-pi/face-identify-raspberry-pi/ (accessed Nov. 10, 2022).
+
+[17] ‘Face Recognition with FaceNet and MTCNN’. https://arsfutura.com/magazine/face-recognition-with-facenet-and-mtcnn/ (accessed Jan. 29, 2023).
+
+[18] N. Samsudin, ‘Building a dog search engine with FaceNet’, Analytics Vidhya, Oct. 15, 2020. https://medium.com/analytics-vidhya/building-a-dog-search-engine-with-facenet-65d1ae79dd8a (accessed Jan. 09, 2023).
+
+[19] M. Saini, ‘Train FaceNet with triplet loss for real time face recognition…’, Medium, Jul. 20, 2019. https://medium.com/@mohitsaini_54300/train-facenet-with-triplet-loss-for-real-time-face-recognition-a39e2f4472c3 (accessed Jan. 12, 2023).
+
+[20] S. Pospielov, ‘What is the Best Facial Recognition Software to Use in 2022?’, Medium, Jul. 07, 2022. https://towardsdatascience.com/what-is-the-best-facial-recognition-software-to-use-in-2021-10f0fac51409 (accessed Nov. 09, 2022).
+
+[21] C.-F. Wang, ‘What’s the Difference Between Haar-Feature Classifiers and Convolutional Neural Networks?’, Medium, Aug. 04, 2018. 
+https://towardsdatascience.com/whats-the-difference-between-haar-feature-classifiers-and-convolutional-neural-networks-ce6828343aeb (accessed Jan. 20, 2023).
+
+[22] O. Moindrot, ‘Triplet Loss and Online Triplet Mining in TensorFlow’, Olivier Moindrot blog, Mar. 19, 2018. https://omoindrot.github.io/triplet-loss (accessed Jan. 23, 2023).
+
+[23] T. A. Team, ‘The Strengths & Weaknesses of Face2Vec (FaceNet) – Towards AI’. https://towardsai.net/p/computer-vision/the-strengths-weaknesses-of-face2vec-facenet, https://towardsai.net/p/computer-vision/the-strengths-weaknesses-of-face2vec-facenet (accessed Jan. 10, 2023).
+
+[24] V. Agarwal, ‘Face Detection Models: Which to Use and Why?’, Medium, Jul. 02, 2020. https://towardsdatascience.com/face-detection-models-which-to-use-and-why-d263e82c302c (accessed Jan. 9, 2023).
+
+[25] ‘What is Face Detection? Ultimate Guide 2023 + Model Comparison’, Sep. 06, 2022. https://learnopencv.com/what-is-face-detection-the-ultimate-guide/ (accessed Jan. 9, 2023).
+
+## Other
+
+[26] ‘Benchmarking TensorFlow and TensorFlow Lite on the Raspberry Pi’, Hackster.io. https://www.hackster.io/news/benchmarking-tensorflow-and-tensorflow-lite-on-the-raspberry-pi-43f51b796796 (accessed Jan. 29, 2023).
+
+[27] ‘Convert TensorFlow models | TensorFlow Lite’, TensorFlow. https://www.tensorflow.org/lite/models/convert/convert_models (accessed Jan. 22, 2023).
+
+[28] Q-engineering, ‘Deep learning with Raspberry Pi and alternatives in 2022 - Q-engineering’. https://qengineering.eu/deep-learning-with-raspberry-pi-and-alternatives.html (accessed Nov. 09, 2022).
+
+[29] Q-engineering, ‘Embedded vision - Q-engineering’. https://qengineering.eu/embedded-vision.html (accessed Nov. 09, 2022).
+
+
+## Data
+
+[30] ‘Cat and Dog’. https://www.kaggle.com/datasets/tongpython/cat-and-dog (accessed Jan. 09, 2023).
+
+[31] ‘Animal Faces’. https://www.kaggle.com/datasets/andrewmvd/animal-faces (accessed Jan. 09, 2023).
+
+
+
+
+
